@@ -3,9 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'tailwindcss/tailwind.css';
-import SwiperCore, { Autoplay, Pagination } from 'swiper/modules';
+import {Pagination ,Autoplay } from 'swiper/modules';
 
-SwiperCore.use([Autoplay, Pagination]);
 
 import homImg1 from '../assets/Img/portfolio/ace-gold.jpg'
 import homImg2 from '../assets/Img/portfolio/aljamia.jpg' 
@@ -37,7 +36,7 @@ function Portfolio() {
       style={{ backgroundImage: `url(${'bgAcademic'})` }}
       className='bg-white w-full h-full px-3 py-10 space-y-10 text-center bg-no-repeat md:px-10 lg:px-10 xl:px-36 md:py-16 lg:py-20 xl:py-24'
     >
-      <h2 className=' font-medium text-5xl xl:text-6xl'>Portfolios</h2>
+      <h2 className=' font-medium text-5xl xl:text-6xl'>Portfolio</h2>
       <p className='text-primary text-lg lg:text-xl'>
         Discover DataHex's impressive project portfolio, which features high-quality work, positive feedback, and
         user-friendly interfaces. Every project we work on demonstrates our dedication to excellence. We consistently
@@ -48,13 +47,14 @@ function Portfolio() {
         slidesPerView={1}
         spaceBetween={10}
         autoplay={{
-          delay: 50,
+          delay: 2500,
           disableOnInteraction: false,
           pauseOnMouseEnter:true,
         }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
+
         }}
         breakpoints={{
           '@0.00': {
@@ -74,11 +74,12 @@ function Portfolio() {
             spaceBetween: 50,
           },
         }}
-        className='w-full h-auto px-2 pt-5 pb-16 overflow-y-visible'
+         modules={[Pagination,Autoplay]}
+        className='w-full h-full px-10 md:px-2 pt-5 pb-16 overflow-y-visible'
       >
         {images.map((image, index) => (
           <SwiperSlide key={index} className='transition-all bg-white hover:shadow-xl drop-shadow-lg rounded-3xl'>
-            <img src={image} className='transition-all rounded-2xl duration-200 object-cover w-full h-[400px] hover:scale-105 cursor-pointer' alt='' />
+            <img src={image} className='transition-all rounded-2xl duration-200 object-cover w-full h-96 md:h-[400px] hover:scale-95 cursor-pointer' alt='' />
           </SwiperSlide>
         ))}
       </Swiper>

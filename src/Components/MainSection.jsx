@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePng from '../assets/Img/HomePng.png'
+import HomePng from '../assets/Img/png.png'
 import Pattern from '../assets/Img/pattern.png'
 import '../App.css'
 import { DhButton } from '../assets/DhButton';

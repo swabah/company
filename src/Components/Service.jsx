@@ -13,7 +13,6 @@ function Service() {
         homImg3,
         homImg4,
      ];
-     const number = ['1', '2', '3', '4'];
      const contents = [
        'Deal Aggregation',
        'Exclusive Discounts',

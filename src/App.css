@@ -1,0 +1,143 @@
+
+
+.bg-pale{
+  background-color: #f4f2ed
+}
+.nav{
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 5px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.product-logo{
+filter:grayscale(100%);
+transition:0.6s ease;
+}
+
+.product-logo:hover{
+filter:grayscale(0%);
+transform: scale(1.1);
+}
+.nav2{
+background: rgba( 0, 0, 0, 0.9 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
+
+}
+
+
+
+.up-down-anim{
+-webkit-animation: mover 2s infinite  alternate;
+  animation: mover 2s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+0% { transform: translateY(0); }
+100% { transform: translateY(-28px); }
+}
+@keyframes mover {
+0% { transform: translateY(0); }
+100% { transform: translateY(-28px); }
+}
+
+.zx-btn{
+transition: 0.3s ease;
+}
+.zx-btn:hover{
+transform: translate(-5px,-5px);
+
+}
+
+.zx-shadow-btn{
+transition: 0.5s ease;
+}
+.zx-shadow-btn:hover{
+box-shadow: 6px 6px 0px rgba( 0, 0, 0, 1 );
+
+}
+.zx-shadow-btn:disabled{
+background: #fff;
+color:#000;
+
+}
+.zx-shadow-btn:disabled:hover{
+background: #fff;
+
+}
+
+.white-svg{
+filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(113deg) brightness(109%) contrast(101%);
+}
+
+.link{
+transition: 0.5s ease;
+}
+.link:hover{
+transform: translateY(-6px);
+}
+
+
+
+.button {
+--bg: #000;
+--hover-bg: #FACC15;
+--hover-text: #000;
+color: #fff;
+border: 1px solid var(--bg);
+border-radius: 4px;
+padding: 0.8em 2em;
+background: var(--bg);
+transition: 0.2s;
+}
+
+.button:hover {
+color: var(--hover-text);
+transform: translate(-0.25rem,-0.25rem);
+background: var(--hover-bg);
+box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+transform: translate(0);
+box-shadow: none;
+}
+
+
+
+.rotate-icon{
+animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+0% {
+  transform: rotate(0deg);
+}
+20%{
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(359deg);
+}
+}
+
+#slidingImage{
+animation: entry 1s ease;
+transition:opacity .1s ease, transform 3s ease;
+}
+#Blinking{
+animation: entry 10s ease;
+transition:opacity .5s ease, transform 4s ease;
+}
+@keyframes entry{
+0%{
+    transform: translateX(4);
+     opacity:0.8;
+}
+100%{
+    transform: translateX(0);
+    opacity:1;
+}
+
+}

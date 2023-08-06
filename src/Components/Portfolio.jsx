@@ -1,10 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import '../App.css'
-import homImg1 from '../assets/Img/portfolio/one.png'
-import homImg2 from '../assets/Img/portfolio/two.png' 
-import homImg3 from '../assets/Img/portfolio/three.png' 
-import homImg4 from '../assets/Img/portfolio/four.png' 
-import {CgPlayTrackNext , CgPlayTrackPrev} from 'react-icons/cg'
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'tailwindcss/tailwind.css';
+import SwiperCore, { Autoplay, Pagination } from 'swiper/modules';
+
+SwiperCore.use([Autoplay, Pagination]);
+
+import homImg1 from '../assets/Img/portfolio/ace-gold.jpg'
+import homImg2 from '../assets/Img/portfolio/aljamia.jpg' 
+import homImg3 from '../assets/Img/portfolio/asm.jpg' 
+import homImg4 from '../assets/Img/portfolio/bestone .jpg' 
+import homImg5 from '../assets/Img/portfolio/dallo-mob.jpg' 
+import homImg6 from '../assets/Img/portfolio/bestone copy.jpg' 
+import homImg7 from '../assets/Img/portfolio/dfms.jpg' 
+import homImg8 from '../assets/Img/portfolio/dallo.jpg' 
+import homImg9 from '../assets/Img/portfolio/ethic-b.jpg' 
+import homImg10 from '../assets/Img/portfolio/key-node.jpg' 
 
 function Portfolio() {
   const images = [
@@ -12,85 +24,66 @@ function Portfolio() {
     homImg2,
     homImg3,
     homImg4,
- ];
- const number = ['1', '2', '3', '4'];
- const contents = [
-   'Deal Aggregation',
-   'Exclusive Discounts',
-   'User-Friendly Interface',
-   'Community Engagement and Reviews',
- ];
- const [current, setCurrent] = useState(0);
+    homImg5,
+    homImg6,
+    homImg7,
+    homImg8,
+    homImg9,
+    homImg10,
+  ];
 
- useEffect(() => {
-   const interval = setInterval(() => {
-     setCurrent((prevCurrent) => (prevCurrent === images.length - 1 ? 0 : prevCurrent + 1));
-   }, 5000);
-
-   return () => clearInterval(interval);
- }, [images.length]);
-
- const playNext = () => {
-   setCurrent((prevCurrent) => (prevCurrent === images.length - 1 ? 0 : prevCurrent + 1));
- };
-
- const playPrev = () => {
-   setCurrent((prevCurrent) => (prevCurrent === 0 ? images.length - 1 : prevCurrent - 1));
- };
-
- return (
-  <div id='Service' className='w-full h-full px-5 md:px-10  py-20 lg:py-32 md:h-5/6 lg:px-20 xl:px-40 '>
-    
-   <div className="w-full h-full">
-     {images.map((slide, index) => (
-       <div key={index}>
-         {index === current && (
-           <div className="rounded-md w-full relative cursor-pointer bg-white">
-             <img
-               src={slide}
-               className="w-full inner-shadow shadow-indigo-100 rounded-md h-72 lg:h-96 object-cover brightness-50 bg-center"
-               id="slidingImage"
-               alt={`Slide ${index + 1}`}
-             />
-             {/* {number.map((num, i) => (
-               current === i && (
-                 <h2
-                   className="absolute font-extrabold text-4xl lg:text-5xl text-white right-3 lg:right-3 lg:bottom-1.5 brightness-150 opacity-70 bottom-1.5"
-                   key={i}
-                 >
-                   {num}
-                 </h2>
-               )
-             ))} */}
-             <div className="rounded-md w-full h-full bg-black opacity-20 z-10 absolute top-0"></div>
-             {contents.map((content, i) => (
-               current === i && (
-                 <div
-                   className="absolute flex space-y-1 md:space-y-2 flex-col inset-0 z-10 items-center text-center md:text-start justify-center w-full h-full"
-                   key={i}
-                 >
-                   <div className="relative flex items-center justify-center space-x-1">
-                     <span onClick={playPrev} className="text-white text-lg md:text-2xl">
-                       <CgPlayTrackPrev />
-                     </span>
-                     <h1 className="text-[#eee] text-sm md:text-base opacity-80 z-10">Our services</h1>
-                     <span onClick={playNext} className="text-white text-lg md:text-2xl">
-                       <CgPlayTrackNext />
-                     </span>
-                   </div>
-                   <h2 className="text-xl lg:text-4xl opacity-90 tracking-wider font-extrabold text-[#ffff] uppercase">
-                     {content}
-                   </h2>
-                 </div>
-               )
-             ))}
-           </div>
-         )}
-       </div>
-     ))}
-   </div>
-  </div>
- );
+  return (
+    <div
+      style={{ backgroundImage: `url(${'bgAcademic'})` }}
+      className='bg-white w-full h-full px-3 py-10 space-y-10 text-center bg-no-repeat md:px-10 lg:px-10 xl:px-36 md:py-16 lg:py-20 xl:py-24'
+    >
+      <h2 className=' font-medium text-5xl xl:text-6xl'>Portfolios</h2>
+      <p className='text-primary text-lg lg:text-xl'>
+        Discover DataHex's impressive project portfolio, which features high-quality work, positive feedback, and
+        user-friendly interfaces. Every project we work on demonstrates our dedication to excellence. We consistently
+        deliver outstanding digital solutions that exceed expectations by focusing on innovation and client satisfaction.
+        Experience the DataHex difference and take your business to new heights.
+      </p>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        autoplay={{
+          delay: 50,
+          disableOnInteraction: false,
+          pauseOnMouseEnter:true,
+        }}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true,
+        }}
+        breakpoints={{
+          '@0.00': {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          '@0.75': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '@1.00': {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          '@1.50': {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
+        className='w-full h-auto px-2 pt-5 pb-16 overflow-y-visible'
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index} className='transition-all bg-white hover:shadow-xl drop-shadow-lg rounded-3xl'>
+            <img src={image} className='transition-all rounded-2xl duration-200 object-cover w-full h-[400px] hover:scale-105 cursor-pointer' alt='' />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 }
 
-export default Portfolio
+export default Portfolio;

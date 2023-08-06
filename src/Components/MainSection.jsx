@@ -11,7 +11,7 @@ const MainSection = () => {
      style={{ backgroundImage: `url(${Pattern})` }}
       className="relative flex items-center w-full h-full py-16 md:py-32 lg:py-0 lg:h-screen px-5 md:px-10 lg:px-20 xl:px-40"
     >
-      <div className='w-full  h-full bg-[#f6d860]  opacity-5 absolute top-0 left-0 '></div>
+      <div className='w-full  h-full bg-cream-300  opacity-20 absolute top-0 left-0 '></div>
       <main className=" z-0 flex flex-col items-center h-full md:flex-row">
         <div className="order-2 md:order-1">
           <h1

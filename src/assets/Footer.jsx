@@ -37,7 +37,7 @@ function Footer  ()  {
                 }
                 </div>
                 <br /> <br />
-         <section className="flex justify-center"> <img src={logo} className="w-16 opacity-40" alt="" /></section>
+         <section className="flex justify-center"> <img src={logo} className="w-16 md:w-28 xl:w-36 opacity-40" alt="" /></section>
             </div>
         </footer>
     );

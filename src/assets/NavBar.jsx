@@ -28,7 +28,7 @@ const NavBar = () => {
     window.addEventListener('scroll', Navfix);
 
     return (
-        <div className={`w-full h-auto  px-5 md:px-10 lg:px-20 xl:px-40 z-50 ${fix ? ' bg-black fixed left-0 top-0 shadow-lg drop-shadow-md  ' : ' text-[#0d1d39] bg-black '}`}>
+        <div className={`w-full h-auto  px-5 md:px-10 lg:px-20 xl:px-40 z-50 ${fix ? ' bg-primary fixed left-0 top-0 shadow-lg drop-shadow-md  ' : ' text-[#0d1d39] bg-primary '}`}>
         <div className="flex items-center justify-between w-full h-full">
           <div  className='w-20 h-20 '>
             <img src={logohead} alt="" className='w-full object-cover h-full' />

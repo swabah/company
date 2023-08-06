@@ -8,6 +8,7 @@ import Portfolio from './Components/Portfolio'
 import MissionVission from './Components/MissionVission'
 import Contact from './Components/Contact'
 import Footer from './assets/Footer'
+import Service from './Components/Service'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <MainSection/>
       <What/>
       <Clients/>
+      <Service/>
       <Portfolio/>
       <MissionVission/>
       <Contact/>
